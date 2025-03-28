@@ -1,9 +1,0 @@
-com/app/playerservicejava/PlayerServiceJavaApplication.class
-com/app/playerservicejava/config/ChatClientConfiguration.class
-com/app/playerservicejava/model/Players.class
-com/app/playerservicejava/model/Player.class
-com/app/playerservicejava/repository/PlayerRepository.class
-com/app/playerservicejava/controller/PlayerController.class
-com/app/playerservicejava/service/chat/ChatClientService.class
-com/app/playerservicejava/service/PlayerService.class
-com/app/playerservicejava/controller/chat/ChatController.class
