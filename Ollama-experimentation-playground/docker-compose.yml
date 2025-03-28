@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  player-service:
+    image: maven:3.9.5-eclipse-temurin-17
+    container_name: player-service
+    build:
+      context: .
+      dockerfile: Dockerfile # This will build your Spring Boot Player Service
+    environment:
+      - JAVA_OPTS=-Xms512m -Xmx1024m
+    ports:
+      - "8080:8080" # Expose port 8080 for the Player service
+    volumes:
+      - .:/usr/src/app # Mount the current directory to the container
+    command: mvn spring-boot:run # Run the Player Service using Maven
+    depends_on:
+      - ollama-service # Ensure Ollama is running before Player service starts
+
+  ollama-service:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434" # Expose port for Ollama API
+    volumes:
+      - ollama:/root/.ollama # Persist Ollama's data in a named volume
+    command: "ollama run tinyllama" # Directly run the Ollama model
+    restart: unless-stopped
+
+volumes:
+  ollama:
