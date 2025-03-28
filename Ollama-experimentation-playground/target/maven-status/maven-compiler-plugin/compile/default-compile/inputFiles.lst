@@ -1,0 +1,9 @@
+/app/src/main/java/com/app/playerservicejava/PlayerServiceJavaApplication.java
+/app/src/main/java/com/app/playerservicejava/config/ChatClientConfiguration.java
+/app/src/main/java/com/app/playerservicejava/controller/PlayerController.java
+/app/src/main/java/com/app/playerservicejava/controller/chat/ChatController.java
+/app/src/main/java/com/app/playerservicejava/model/Player.java
+/app/src/main/java/com/app/playerservicejava/model/Players.java
+/app/src/main/java/com/app/playerservicejava/repository/PlayerRepository.java
+/app/src/main/java/com/app/playerservicejava/service/PlayerService.java
+/app/src/main/java/com/app/playerservicejava/service/chat/ChatClientService.java
